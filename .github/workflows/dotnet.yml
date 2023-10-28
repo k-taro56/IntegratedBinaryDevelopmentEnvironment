@@ -21,3 +21,12 @@ jobs:
 
     - name: Build
       run: dotnet build --no-restore
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts
+        path: |
+          **/bin/**/*.dll
+          **/bin/**/*.exe
+          **/bin/**/*.pdb
