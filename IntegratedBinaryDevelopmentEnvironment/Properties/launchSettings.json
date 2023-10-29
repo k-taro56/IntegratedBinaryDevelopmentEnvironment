@@ -1,5 +1,8 @@
 {
   "profiles": {
+    "IntegratedBinaryDevelopmentEnvironment (Package)": {
+      "commandName": "MsixPackage"
+    },
     "IntegratedBinaryDevelopmentEnvironment (Unpackaged)": {
       "commandName": "Project"
     }
