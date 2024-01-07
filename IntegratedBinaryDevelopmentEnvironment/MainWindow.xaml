@@ -8,7 +8,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <Border x:Name="AppTitleBar" Height="30" VerticalAlignment="Top"/>
+
+        <NavigationView x:Name="NavigationViewControl" Grid.Column="1" PaneDisplayMode="Top" Margin="0,30,0,0" SelectionChanged="NavigationViewSelectionChanged" IsBackEnabled="True" BackRequested="NavigationViewBackRequested">
+            <Frame x:Name="ContentFrame" Margin="10"/>
+        </NavigationView>
+    </Grid>
 </Window>
