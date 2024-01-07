@@ -1,17 +1,5 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -23,13 +11,54 @@ namespace IntegratedBinaryDevelopmentEnvironment;
 /// </summary>
 public sealed partial class MainWindow : Window
 {
+    private bool _isNavigationViewItemChangedFromCode;
+
     public MainWindow()
     {
-        this.InitializeComponent();
+        InitializeComponent();
+
+        ExtendsContentIntoTitleBar = true;
+        SetTitleBar(AppTitleBar);
     }
 
-    private void myButton_Click(object sender, RoutedEventArgs e)
+    private void NavigationViewSelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
     {
-        myButton.Content = "Clicked";
+        if (_isNavigationViewItemChangedFromCode)
+        {
+            _isNavigationViewItemChangedFromCode = false;
+            return;
+        }
+
+        if (args.IsSettingsSelected)
+        {
+
+        }
+        else
+        {
+            NavigationViewItem selectedItem = (NavigationViewItem)args.SelectedItem;
+
+            if (selectedItem.Tag is Type type)
+            {
+                ContentFrame.Navigate(type);
+            }
+        }
+    }
+
+    private void NavigationViewBackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
+    {
+        if (ContentFrame.CanGoBack)
+        {
+            _isNavigationViewItemChangedFromCode = true;
+            ContentFrame.GoBack();
+
+            foreach (object item in NavigationViewControl.MenuItems)
+            {
+                if (item is NavigationViewItem navigationViewItem && navigationViewItem.Tag is Type type && type == ContentFrame.SourcePageType)
+                {
+                    NavigationViewControl.SelectedItem = item;
+                    return;
+                }
+            }
+        }
     }
 }
