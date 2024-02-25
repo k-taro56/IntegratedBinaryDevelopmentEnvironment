@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegratedBinaryDevelopmentEnvironment.Web", "IntegratedBinaryDevelopmentEnvironment.Web\IntegratedBinaryDevelopmentEnvironment.Web.csproj", "{8513B35D-D027-49DA-BB53-6F8F2C9220CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLibrary", "RazorClassLibrary\RazorClassLibrary.csproj", "{6B41DE11-008E-416C-A1B6-A4D434BA5591}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8513B35D-D027-49DA-BB53-6F8F2C9220CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8513B35D-D027-49DA-BB53-6F8F2C9220CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8513B35D-D027-49DA-BB53-6F8F2C9220CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B41DE11-008E-416C-A1B6-A4D434BA5591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B41DE11-008E-416C-A1B6-A4D434BA5591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B41DE11-008E-416C-A1B6-A4D434BA5591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B41DE11-008E-416C-A1B6-A4D434BA5591}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
