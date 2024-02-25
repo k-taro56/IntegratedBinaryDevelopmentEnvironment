@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34607.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegratedBinaryDevelopmentEnvironment.Web", "IntegratedBinaryDevelopmentEnvironment.Web\IntegratedBinaryDevelopmentEnvironment.Web.csproj", "{8513B35D-D027-49DA-BB53-6F8F2C9220CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8513B35D-D027-49DA-BB53-6F8F2C9220CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8513B35D-D027-49DA-BB53-6F8F2C9220CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8513B35D-D027-49DA-BB53-6F8F2C9220CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8513B35D-D027-49DA-BB53-6F8F2C9220CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADD66E93-62F0-47C6-87DE-37CEB9E5D1C9}
+	EndGlobalSection
+EndGlobal
